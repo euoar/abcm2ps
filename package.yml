@@ -1,0 +1,21 @@
+name        : abcMIDI
+version     : 2017.02.02
+release     : 39
+source      :
+        #- https://sourceforge.net/projects/abc/files/abcmidi/abcmidi/abcMIDI-2017.02.02.zip : 4255b246fb56f9e9d073eb0c6020a09b69e344a9 
+    - https://sourceforge.net/projects/abc/files/abcmidi/abcmidi/abcMIDI-2017.02.02.zip : 95f78749267711d0bf1de2bd5d9c202189c83cd4e3da54335780ac3b874c6df6 
+      #- https://sourceforge.net/projects/abc/files/abcmidi/abcmidi/abcMIDI-2017.02.02.zip : 5b6d9f25a2e48225c22bc52edb16593d 
+license     :
+    - GPL-2.0
+component   : editor
+summary     : para editar música
+description : |
+    GNU nano is an easy-to-use text editor originally designed as a replacement for 
+    Pico, the ncurses-based editor from the non-free mailer package Pine.
+setup      : |
+    %configure --enable-utf8 --docdir=/usr/share/doc/nano
+build      : |
+    %make
+install    : |
+    %make_install
+    # TODO: Convert to stateless
